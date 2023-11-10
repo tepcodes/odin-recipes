@@ -99,5 +99,39 @@ a {
     text-decoration: none;
     color: inherit;
     padding: auto;
+}
 
+/* CSS for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0 10px; /* Adjust the body padding for smaller screens */
+    }
+
+    .header .title {
+        font-size: 30px; /* Reduce the title font size for smaller screens */
+    }
+
+    .content {
+        margin: 100px auto; /* Modify the margin for the content section */
+    }
+
+    .recipe {
+        height: auto; /* Adjust the height for individual recipes */
+        max-width: 250px; /* Limit the width of recipes */
+    }
+
+    img {
+        height: auto; /* Allow images to resize based on width */
+        width: 100%; /* Make images fill their container */
+        max-width: 250px; /* Limit the image width */
+    }
+
+    .text {
+        font-size: 12px; /* Reduce text size for smaller screens */
+        width: 150px; /* Adjust text container width */
+    }
+
+    .footer {
+        position: relative; /* Remove fixed positioning for the footer */
+    }
 }
