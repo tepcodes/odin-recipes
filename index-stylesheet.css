@@ -1,11 +1,12 @@
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: center;
     align-items: center;
     background-color: ivory;
     color: #101010;
+    height: 100%;
 }
 
 /* * { border: red solid 1px;} */
@@ -13,7 +14,7 @@ body {
 .header {
     background-color: #b7e8ff;
     width:100%;
-    padding: 10px;
+    padding: 5px 5%;
     margin: 0;
     position: fixed;
     top: 0;
@@ -63,7 +64,7 @@ body {
     will-change: transform;
 }
 
-.recipe:hover {
+img:hover {
     transform: scale(1.1);
 }
 
@@ -84,19 +85,19 @@ img {
 
 .footer {
     background-color: #b7e8ff;
-    width:100%;
-    padding: 10px;
-    margin: 0;
-    position: fixed;
-    bottom: 0;
-    left:0;
-    right: 0;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0; 
+    z-index: 100;
+    width: 100%;
+    font-size: small;
+    padding: 10px;
 }
 
 a {
@@ -133,9 +134,5 @@ a {
     .text {
         font-size: 12px; /* Reduce text size for smaller screens */
         width: 150px; /* Adjust text container width */
-    }
-
-    .footer {
-        position: relative; /* Remove fixed positioning for the footer */
     }
 }

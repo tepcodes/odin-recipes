@@ -1,4 +1,4 @@
-/* * {border: red solid 0.5px;} */
+* {border: red solid 0.5px;}
 
 body {
     display: flex;
@@ -7,8 +7,10 @@ body {
     font-size: 15px;
     justify-content: center;
     align-items: center;
+    height: 100%;
     background-color: ivory;
     color: #101010;
+    gap: 50px;
 }
 
 img {
@@ -28,12 +30,16 @@ button {
 }
 
 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.header {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
     color: inherit;
-    padding: 10px 20px;
+    padding: 5px 5%;
     margin: 0;
 }
 
@@ -64,9 +70,9 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 820px;
-    height: 670px;
-    padding: 100px 5px 20px;
+    width: 80%;
+    height: auto;
+    padding: 15% 5px 20px;
 }
 
 .hook {
@@ -91,8 +97,8 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 750px;
-    height: 400px;
+    width: 80%;
+    height: auto;
 }
 
 .ingredients .text {
@@ -137,7 +143,8 @@ li::before {
 .procedure {
     display: flex;
     flex-direction: column;
-    padding: 50px 30px 80px;
+    width: 80%;
+    height: auto;
 }
 
 .procedure .top-row {
@@ -151,6 +158,9 @@ li::before {
 .procedure-image {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: auto;
 }
 
 .procedure img {
@@ -167,17 +177,48 @@ li::before {
 
 .footer {
     background-color: #b7e8ff;
-    width:100%;
-    margin: 0;
-    position: fixed;
-    bottom: 0;
-    left:0;
-    right: 0;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    font-family: cursive;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0; 
+    z-index: 100;
+    width: 100%;
+    font-size: small;
+    padding: 10px;
+}
+
+/* CSS for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0 10px; /* Adjust the body padding for smaller screens */
+    }
+
+    .header .title {
+        font-size: 30px; /* Reduce the title font size for smaller screens */
+    }
+
+    .content {
+        margin: 100px auto; /* Modify the margin for the content section */
+    }
+
+    .recipe {
+        height: auto; /* Adjust the height for individual recipes */
+        max-width: 250px; /* Limit the width of recipes */
+    }
+
+    img {
+        height: auto; /* Allow images to resize based on width */
+        width: 100%; /* Make images fill their container */
+        max-width: 250px; /* Limit the image width */
+    }
+
+    .text {
+        font-size: 12px; /* Reduce text size for smaller screens */
+        width: 150px; /* Adjust text container width */
+    }
 }
